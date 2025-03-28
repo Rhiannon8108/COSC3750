@@ -14,11 +14,14 @@ CFLAGS=-ggdb -Wall
 
 
 # Target for executable 
-wytar: wytar.c
-	$(CC) $(CFLAGS) wytar.c -o wytar 
+wytar: wytar.c tarFunctions.c
+	$(CC) $(CFLAGS) wytar.c tarFunctions.0 -o wytar 
+
+tarFunctions.0 tarFunctions.c tarFunctions.h 
+	$(CC) $(CFLAGS) -c tarFunctions.c
 
 #Tidy target (removes object files)
 tidy: 
-	/bin/rm -f a.out core.* 
+	/bin/rm -f  tarFunctions.0 a.out core.* 
 clean: tidy 
 	/bin/rm -f wytar
