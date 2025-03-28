@@ -1,8 +1,8 @@
 # MakeFile
 # Rhiannon Kilduff
 # COSC 3750 Spring 2025
-# Homework 6 Makefile
-# March 28th, 2025 
+# Homework 4 Makefile
+# February 18, 2025 
 # Makefile that compiles the given files.
 
 
@@ -14,11 +14,11 @@ CFLAGS=-ggdb -Wall
 
 
 # Target for executable 
-wytar: wytar.c
-	$(CC) $(CFLAGS) wytar.c -o wytar 
+wycat: wycat.c
+	$(CC) $(CFLAGS) wycat.c -o wycat 
 
 #Tidy target (removes object files)
 tidy: 
 	/bin/rm -f a.out core.* 
 clean: tidy 
-	/bin/rm -f wytar
+	/bin/rm -f wycat
